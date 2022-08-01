@@ -1,0 +1,6 @@
+#!/bin/bash
+python /nanopb/generator/nanopb_generator.py $@
+cp /nanopb/pb.h /nanopb/pb_common.h /nanopb/pb_encode.h /nanopb/pb_decode.h ./
+cp /nanopb/pb_common.c /nanopb/pb_encode.c /nanopb/pb_decode.c ./
+
+
