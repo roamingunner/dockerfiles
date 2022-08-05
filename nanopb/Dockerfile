@@ -10,7 +10,7 @@ RUN apt -y install git scons build-essential g++
 RUN apt -y install protobuf-compiler python3.8 python3-protobuf
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1 && update-alternatives --set python /usr/bin/python3.8
 
-RUN git clone https://github.com/nanopb/nanopb.git --depth=1
+RUN git clone https://github.com/nanopb/nanopb.git -b nanopb-0.4.6 --depth=1
 RUN cd nanopb/tests && scons
 COPY nanopb-generator /bin/
 WORKDIR /workspace/
